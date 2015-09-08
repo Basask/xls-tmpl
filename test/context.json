@@ -1,0 +1,14 @@
+{
+    "bool": true,
+    "int": 3345,
+    "str": "Some kind of monster",
+    "float": 3.56,
+    "list": [1,2,3,4,5],
+    "object": {
+        "bool": true,
+        "int": 3345,
+        "float": 3.56,
+        "list": [1,2,3,4,5],
+        "str": "Some kind of monster"
+    }
+}
