@@ -7,14 +7,9 @@ context = 'context.json'
 
 
 f = open(context, 'r')
-data = f.read()
-j_data = json.loads(data)
+data = json.loads(f.read())
 f.close()
 
-print j_data
-
 wb = Workbook(template=template)
-wb.render(j_data)
-
+wb.render(data)
 wb.save('output.xls')
-

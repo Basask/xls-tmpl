@@ -7,4 +7,13 @@ class Context(object):
         self.ctx = context
 
     def get(self, key):
-        return unicode(self.ctx.get(key))
+        parts = key.split('.')
+        result = None
+        if len(parts):
+            result = self.ctx.get(parts.pop(0))
+            for part in parts:
+                result = result.get(part)
+        else:
+            result = self.ctx.get(key)
+
+        return unicode(result)
